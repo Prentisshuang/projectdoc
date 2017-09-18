@@ -31,6 +31,22 @@
             }
         }
     };
+
+    function init() {
+    	var contactus = document.getElementById("contactus");
+    	var detail = document.getElementById("ibm-contact-module");
+    	contactus.onclick = function(){
+    		contactus.className = "ibm-btn-pri ibm-contact--bg-blue-60 ibm-contact-widget-btn";
+    		detail.className = "ibm-contact-widget ibm-contact--bg-blue-60 addtransition ibm-active";
+    		detail.setAttribute("aria-hidden", "false");
+    	}
+    	var close = document.getElementById("closeBtn");
+    	close.onclick = function(){
+    		detail.className = "ibm-contact-widget ibm-contact--bg-blue-60 addtransition";
+    		detail.setAttribute("aria-hidden", "true");
+    		contactus.className = "ibm-btn-pri ibm-contact--bg-blue-60 ibm-contact-widget-btn ibm-active";
+    	}
+    }
     </script>
     <meta name="description" content="Learn how to use the Northstar digital design platform to deliver engaging content and services to any IBM web page." />
     <meta name="keywords" content="Northstar,web standards,web design,web guidelines,web tools,ibm.com standards,ibm.com guidelines" />
@@ -56,50 +72,29 @@
     </style>
 </head>
 
-<body id="ibm-com" class="ibm-type">
+<body id="ibm-com" class="ibm-type" onload="init()">
     <div id="ibm-top">
         <div id="ibm-masthead" role="banner" aria-label="IBM">
             <div id="ibm-universal-nav">
                 <nav role="navigation" aria-label="IBM">
                     <div id="ibm-home"><a href="http://www.ibm.com/us/en/">IBM®</a></div>
-                    <ul id="ibm-menu-links" role="toolbar" aria-label="Site map">
-                        <li><a href="http://www.ibm.com/sitemap/us/en/">Site map</a></li>
-                    </ul>
+                  
                 </nav>
                 <div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead">
-                    <form id="ibm-search-form" action="http://www.ibm.com/Search/" method="get">
-                        <p>
-                            <label for="q">IBM</label>
-                            <input type="text" maxlength="100" value="" placeholder="Search" name="q" id="q" aria-label="Search" />
-                            <input type="hidden" value="18" name="v" />
-                            <input type="hidden" value="utf" name="en" />
-                            <input type="hidden" value="en" name="lang" />
-                            <input type="hidden" value="us" name="cc" />
-                            <span class="ibm-search-scope">
-									<input type="checkbox" class="ibm-styled-checkbox" name="sn" value="Search standards" checked id="scopeoption"> 
-									<label for="scopeoption">Search standards</label>
-								</span>
-                            <input type="submit" id="ibm-search" class="ibm-btn-search" value="Submit" />
-                        </p>
-                    </form>
-                    <form class="ibm-hide" id="standardSearch" action="//northstar-standard-search.eu-gb.mybluemix.net/search.php" method="get">
-                        <p>
-                            <input type="text" name="q" />
-                        </p>
-                    </form>
+               
+                
                 </div>
             </div>
         </div>
         <div id="ibm-content-wrapper">
             <header role="banner" aria-labelledby="ibm-pagetitle-h1">
                 <div class="ibm-sitenav-menu-container santeliafix">
-                    <div class="ibm-sitenav-menu-name"><a href="/standards/web/">Homepage</a></div>
+                    <div class="ibm-sitenav-menu-name"><a href="/standards/web/">HONEBlog</a></div>
                     <div class="ibm-sitenav-menu-list">
                         <ul role="menubar" class="dynamic-content" data-type="content" data-file="/partials/navs/menu-nav.html">
-                            <li role="presentation"><a role="menuitem" href="/standards/web/design/">Home</a></li>
-                            <li role="presentation"><a role="menuitem" href="/standards/web/write/">Blog</a></li>
-                            <li role="presentation"><a role="menuitem" href="/standards/web/research/">About Us</a></li>
-                            <li role="presentation"><a role="menuitem" href="/standards/web/a-z-index/">Help</a></li>
+                            <li role="presentation"><a role="menuitem" href="index.html" class="ibm-ind-link">Home</a></li>
+                            <li role="presentation"><a role="menuitem" href="blog.html" class="ibm-ind-link">Blog</a></li>
+                      
                         </ul>
                     </div>
                 </div>
@@ -117,60 +112,92 @@
                 <!-- LEADSPACE_END -->
             </header>
             <main role="main" aria-labelledby="ibm-pagetitle-h1">
-                <div class="ibm-columns ibm-padding-bottom-1">
-                    <div class="ibm-col-5-1 ibm-col-medium-2-1 ibm-center">
-                        <a href="####" class="ibm-blocklink ibm-padding-content">
-                            <div><img class="ibm-downsize ibm-circle" src="images/Prentiss.jpg" width="150" height="150" alt="" /></div>
-                        </a>
+                <div class="dynamic-content" data-type="content" data-file="/partials/design/contact-module.html">
+                    <div class="ibm-columns ibm-padding-bottom-1">
+                        <div class="ibm-col-5-1 ibm-col-medium-2-1 ibm-center">
+                            <a href="####" class="ibm-blocklink ibm-padding-content">
+                                <div><img class="ibm-downsize ibm-circle" src="images/johnson.jpg" width="150" height="150" alt="" /></div>
+                            </a>
+                            <p> HONE FLM <a href="https://w3.ibm.com/bluepages/profile.html?uid=038665672">Johnson</a></p>
+                        </div>
+                        <div class="ibm-col-5-1 ibm-col-medium-2-1 ibm-center">
+                            <a href="####" class="ibm-blocklink ibm-padding-content">
+                                <div><img class="ibm-downsize ibm-circle" src="images/hine.jpg" width="150" height="150" alt="" /></div>
+                            </a>
+                            <p> HONE Product Owner <a href="https://w3.ibm.com/bluepages/profile.html?uid=037114672">Hine</a></p>
+                        </div>
+                        <div class="ibm-col-5-1 ibm-col-medium-2-1 ibm-center">
+                            <a href="####" class="ibm-blocklink ibm-padding-content">
+                                <div><img class="ibm-downsize ibm-circle" src="images/wendy.jpg" width="150" height="150" alt="" /></div>
+                            </a>
+                            <p> HONE Business IM <a href="https://w3.ibm.com/bluepages/profile.html?uid=215941672">Wendy</a></p>
+                        </div>
+                        <div class="ibm-col-5-1 ibm-col-medium-2-1 ibm-center">
+                            <a href="####" class="ibm-blocklink ibm-padding-content">
+                                <div><img class="ibm-downsize ibm-circle" src="images/daniel.jpg" width="150" height="150" alt="" /></div>
+                            </a>
+                            <p> HONE Infra IM <a href="https://w3.ibm.com/bluepages/profile.html?uid=208958672">Daniel</a></p>
+                        </div>
+                        <div id="ibm-contact-module" class="ibm-contact-widget ibm-contact--bg-blue-60 addtransition" aria-hidden="true">
+                            <p class="ibm-icononly">
+                                <a id="closeBtn" class="ibm-close-link" href="#">Close</a>
+                            </p>
+                            <h3 class="ibm-autofill">Contack Us</h3>
+                            <h2 class="ibm-bold">Contact us</h2>
+                            <ul class="ibm-live-assistance-list ibm-padding-bottom-0">
+                                <li>
+                                    <a class="ibm-slack-mono-link" href="https://ibm-cio-ssc.slack.com/messages/C4XU5A5T6">HONE Slack</a>
+                                </li>
+                                <li>
+                                    <a class="ibm-email-link" href="mailto:hyanwh@cn.ibm.com?subject=Need Support From HONE&body=Yes, I need support from HONE!">HONE Email</a>
+                                </li>
+                                <li>
+                                    <a class="ibm-profile-link" href="https://w3-connections.ibm.com/wikis/home?lang=en#!/wiki/W460af85c075c_46d0_af05_b2336a501490/page/Who%20We%20Are">HONE Profile</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button id="contactus" class="ibm-btn-pri ibm-contact--bg-blue-60 ibm-contact-widget-btn ibm-active" type="button" value="">Contact us</button>
                     </div>
-                </div>
-                
-    
-     
-
-    <div data-widget="carousel" data-dots="false" data-arrows="true" data-horizontal="true">
-    <div class="ibm-columns" data-widget="setsameheight">
-        <div class="ibm-col-5-2">
-            <h3>This is some heading item #1</h3>
-            <p><img class="ibm-resize" src="images/tg-parallex-image.jpg" alt="Placeholder image" height="140" width="300"></p>
-            <p>This is some descriptive text that is under the heading. <a href="#">Here's a link</a>. This is some descriptive text that is under the heading. </p>
+                  <div data-widget="carousel" data-dots="false" data-arrows="true" data-horizontal="true">
+                        <div class="ibm-columns" data-widget="setsameheight">
+        <div class="ibm-col-12-4">
+            <p><img class="ibm-resize" src="images/blog6.jpg" width="300" height="140" alt="Placeholder image" /></p>
+            <p>2017-09-05, Rodolfo(Sub-domain Leader) hosted CIO WW OM and LA 2Q Town Hall Meeting. </p>
+            <p class="ibm-ind-link"><a class="ibm-forward-link" href="https://w3-connections.ibm.com/blogs/681bbedb-3892-4818-9961-38698c6ccde9/entry/Retrospect_of_The_Town_Hall_Meeting?lang=en_us">Retrospect of The Town Hall Meeting</a></p>
         </div>
-        <div class="ibm-col-5-2">
-            <h3>This is some heading item #2</h3>
-            <p><img class="ibm-resize" src="images/tg-parallex-image.jpg" alt="Placeholder image" height="140" width="300"></p>
-            <p>This is some descriptive text that is under the heading. <a href="#">Here's a link</a>. This is some descriptive text that is under the heading. </p>
+        <div class="ibm-col-12-4">
+            <p><img class="ibm-resize" src="images/watson.jpg" width="300" height="140" alt="Placeholder image" /></p>
+            <p>2017-09-02 CIC CPR and CBDS Team toured its Watson workshop and set Wuhan as its firse stop.</p>
+            <p class="ibm-ind-link"><a class="ibm-forward-link" href="https://w3-connections.ibm.com/blogs/681bbedb-3892-4818-9961-38698c6ccde9/entry/We_are_the_winner_Watson_Hackathon_Day_2017_in_WuHan?lang=en_us">We are the winner --- Watson Hackathon</a></p>
         </div>
-    </div>
-    <div class="ibm-columns">
-        <div class="ibm-col-5-2">
-            <h3>This is some heading item #1</h3>
-            <p><img class="ibm-resize" src="images/tg-parallex-image.jpg" alt="Placeholder image" height="140" width="300"></p>
-            <p>This is some descriptive text that is under the heading. <a href="#">Here's a link</a>. This is some descriptive text that is under the heading. </p>
-        </div>
-        <div class="ibm-col-5-2">
-            <h3>This is some heading item #2</h3>
-            <p><img class="ibm-resize" src="images/tg-parallex-image.jpg" alt="Placeholder image" height="140" width="300"></p>
-            <p>This is some descriptive text that is under the heading. <a href="#">Here's a link</a>. This is some descriptive text that is under the heading. </p>
+        <div class="ibm-col-12-4">
+            <p><img class="ibm-resize" src="images/metrix.jpg" width="300" height="140" alt="Placeholder image" /></p>
+            <p>HONE team involves skill matrix in his Agile journey and benefit a lot from it.</p>
+            <p class="ibm-ind-link"><a class="ibm-forward-link" href="https://w3-connections.ibm.com/blogs/681bbedb-3892-4818-9961-38698c6ccde9/entry/HONE_Agile_Skills_Matrix_Using_Skill_Matrix_for_Growth?lang=en_us">HONE Agile Skills Matrix</a></p>
         </div>
     </div>
-    <div class="ibm-columns ibm-columns-center" >
-        <div class="ibm-col-5-2">
-            <h3>This is some heading item #1</h3>
-            <p><img class="ibm-resize" src="images/tg-parallex-image.jpg" alt="Placeholder image" height="140" width="300"></p>
-            <p>This is some descriptive text that is under the heading. <a href="#">Here's a link</a>. This is some descriptive text that is under the heading. </p>
+   <div class="ibm-columns" data-widget="setsameheight">
+        <div class="ibm-col-12-4">
+            <p><img class="ibm-resize" src="images/visit.jpg" width="300" height="140" alt="Placeholder image" /></p>
+            <p>It's HONE's great honor to welcome the guest from afar(Brazil). And also a great news to announce and to share with other teams.</p>
+            <p class="ibm-ind-link"><a class="ibm-forward-link" href="https://w3-connections.ibm.com/blogs/b880a9de-0b01-477c-930b-a19c0118ebf3/entry/Murilo_s_Weekly_Staying_with_HONE?lang=en_us">Murilo's Weekly Staying with HONE</a></p>
         </div>
-        <div class="ibm-col-5-2">
-            <h3>This is some heading item #2</h3>
-            <p><img class="ibm-resize" src="images/tg-parallex-image.jpg" alt="Placeholder image" height="140" width="300"></p>
-            <p>This is some descriptive text that is under the heading. <a href="#">Here's a link</a>. This is some descriptive text that is under the heading. </p>
+        <div class="ibm-col-12-4">
+            <p><img class="ibm-resize" src="images/pagerduty.jpg" width="300" height="140" alt="Placeholder image" /></p>
+            <p>PagerDuty as a special third party event management system used on newly migrated HONEWeb/Price webpage to achieve HONE DevOps.</p>
+            <p class="ibm-ind-link"><a class="ibm-forward-link" href="https://w3-connections.ibm.com/blogs/b880a9de-0b01-477c-930b-a19c0118ebf3/entry/Pagerduty_in_HONE?lang=en_us">Pagerduty - A Step Further for DevOps in HONE</a></p>
+        </div>
+        <div class="ibm-col-12-4">
+            <p><img class="ibm-resize" src="images/blog2.jpg" width="300" height="140" alt="Placeholder image" /></p>
+            <p>Front-end with its own condition have became a pilot for HONE's DevOps trying.</p>
+            <p class="ibm-ind-link"><a class="ibm-forward-link" href="#">Auto Deployment --- Trying of DevOps on z/VM Platform</a></p>
         </div>
     </div>
-</div>
+                    </div>
             </main>
+            </div>
+            <div id="ibm-footer-module "></div>
         </div>
-        <div id="ibm-footer-module"></div>
-        
-    </div>
 </body>
 
 </html>
